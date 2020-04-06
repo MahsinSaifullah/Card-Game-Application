@@ -3,6 +3,7 @@
 // #include "Player.h"
 // #include "CardGame.h"
 #include "GuessCardGame.h"
+#include "BlackJackCardGame.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -12,10 +13,11 @@ int main()
 {
 
 
-  GuessCardGame game1;
+  // GuessCardGame game1;
+  BlackJackCardGame game2;
 
-  game1.play();
-  game1.showStat();
+  game2.play();
+  game2.showStat();
 
 
 

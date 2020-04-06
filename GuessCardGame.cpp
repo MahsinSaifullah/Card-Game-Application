@@ -2,6 +2,7 @@
 #include "PlayingCard.h"
 #include "CardGame.h"
 #include "GuessCardGame.h"
+#include "helperFunctions.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,17 +11,6 @@
 
 using namespace std;
 
-//clears the terminal
-void clearConsole()
-{
-  cout << "\033[2J\033[1;1H";;
-}
-
-//converts each letter of the string to uppercase
-void toUpperCase(string &mystring)
-{
-  transform(mystring.begin(), mystring.end(), mystring.begin(), ::toupper);
-}
 
 
 GuessCardGame::GuessCardGame()
@@ -218,15 +208,13 @@ void GuessCardGame::play()
 void GuessCardGame::showStat()
 {
   clearConsole();
- int roundNum = 0;
  cout<<endl;
  cout<<"***** Guessing Card Game Stats ******"<<endl;
  cout<<endl;
 
  for(auto round : roundInfo)
  {
-   roundNum++;
-   cout<<"ROUND: "<<roundNum<<endl;
+   cout<<"ROUND: "<<round.first<<endl;
    cout<<"Target card: "<<flush;
    round.second[0].showCard();
    cout<<endl;

@@ -1,5 +1,5 @@
 #ifndef BLACKJACKCARDGAME_H
-#define	BLACKJACKGAME_H
+#define	BLACKJACKCARDGAME_H
 
 #include "Deck.h"
 #include "BlackJackCard.h"
@@ -12,10 +12,10 @@
 using namespace std;
 
 
-class BlackJackCard : public CardGame<BlackJackCard>
+class BlackJackCardGame : public CardGame<BlackJackCard>
 {
 public:
-  BlackJackCard ();
+  BlackJackCardGame ();
   void play();
   void showStat();
 
@@ -24,12 +24,11 @@ private:
   Player<BlackJackCard> user;
   Player<BlackJackCard> bank;
   map<int, string> roundInfo;
-  
+  int roundNumber=0;
+
   int calculateUserTotalValue();
   int calculateBankTotalValue();
-  void stick();
-  void twist();
-
+  int winCount();
 
 
 

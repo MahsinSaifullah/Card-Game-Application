@@ -10,8 +10,8 @@ class BlackJackCard : public PlayingCard
 public:
   BlackJackCard();
   BlackJackCard(string, string);
-  int getCardValue(int);
-  void setCardValue();
+  int getCardValue();
+  void setCardValue(int);
 
 private:
   int cardValue;
