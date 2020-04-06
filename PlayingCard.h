@@ -7,6 +7,7 @@ using namespace std;
 class PlayingCard
 {
 public:
+  PlayingCard();
   PlayingCard(string, string);
   string getCardFace();
   string getCardSuit();

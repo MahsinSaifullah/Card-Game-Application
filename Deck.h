@@ -7,6 +7,8 @@
 #include <vector>
 #include <string>
 
+using namespace std;
+
 template<class cardType>
 class Deck
 {
@@ -43,6 +45,26 @@ public:
     cards.pop_back();
 
     return lastCard;
+  }
+
+  void resetDeck()
+  {
+    cards.clear();
+
+    vector<string> suits= {"HEARTS", "CLUBS", "DIAMONDS", "SPADES"};
+    vector<string> faces = {"TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE","TEN","JACK","QUEEN","KING","ACE"};
+
+
+    for (string suit : suits)
+    {
+
+        for (string face : faces)
+        {
+            cardType newCard(face, suit);
+
+            cards.push_back(newCard);
+        }
+    }
   }
 
   int remainingCards()

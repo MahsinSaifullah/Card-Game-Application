@@ -1,5 +1,8 @@
-#include "PlayingCard.h"
-#include "Deck.h"
+// #include "Deck.h"
+// #include "PlayingCard.h"
+// #include "Player.h"
+// #include "CardGame.h"
+#include "GuessCardGame.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -8,15 +11,11 @@
 int main()
 {
 
-  Deck<PlayingCard> deck;
 
-  deck.shuffleDeck();
+  GuessCardGame game1;
 
-  deck.deal().showCard();
-  deck.deal().showCard();
-  deck.deal().showCard();
-
-  cout<<deck.remainingCards()<<endl;
+  game1.play();
+  game1.showStat();
 
 
 

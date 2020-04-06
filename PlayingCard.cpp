@@ -4,6 +4,8 @@
 
 using namespace std;
 
+PlayingCard::PlayingCard(){}
+
 PlayingCard::PlayingCard(string face, string suit)
 {
   setCardFace(face);
